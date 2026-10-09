@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build and check
+        run: |
+          python -m pip install --upgrade build twine
+          python -m build
+          python -m twine check --strict dist/*
+      - name: The wheel has no modules
+        run: |
+          python -m zipfile -l dist/*.whl | tee files.txt
+          if grep -E "^qevedo/" files.txt; then
+            echo "::error::the meta package must not ship modules (qevedo is a namespace package)"
+            exit 1
+          fi

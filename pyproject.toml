@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qevedo"
+version = "0.1.0"
+description = "The Qevedo quantum toolkit: the QCC compiler (qevedo.compiler) and the qvd simulator (qevedo.simulator)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+keywords = ["quantum", "compiler", "simulator", "openqasm", "quantum-computing"]
+dependencies = [
+    "qevedo-compiler>=0.1,<1",
+    "qevedo-simulator>=0.1,<1",
+]
+
+[project.optional-dependencies]
+numpy = ["qevedo-simulator[numpy]>=0.1,<1"]
+
+[project.urls]
+Homepage = "https://qevedo.com"
+Repository = "https://github.com/qevedo/qevedo"
+Compiler = "https://github.com/qevedo/qevedo-compiler"
+Simulator = "https://github.com/qevedo/qevedo-simulator"
+OpenQASM = "https://github.com/qevedo/openqasm"
+
+# A meta package: no modules of its own. `qevedo` is a namespace package
+# (PEP 420) filled in by qevedo-compiler and qevedo-simulator, so this
+# package must not ship a qevedo/__init__.py.
+[tool.setuptools]
+packages = []
