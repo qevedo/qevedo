@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "qevedo"
-version = "0.1.0"
+version = "0.1.1"
 description = "The Qevedo quantum toolkit: the QCC compiler (qevedo.compiler) and the qvd simulator (qevedo.simulator)"
 readme = "README.md"
 license = "MIT"
