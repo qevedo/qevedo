@@ -22,7 +22,7 @@ numpy = ["qevedo-simulator[numpy]>=0.1,<1"]
 [project.urls]
 Homepage = "https://qevedo.com"
 Repository = "https://github.com/qevedo/qevedo"
-Compiler = "https://github.com/qevedo/qevedo-compiler"
+Compiler = "https://github.com/qevedo/qcc"
 Simulator = "https://github.com/qevedo/qevedo-simulator"
 OpenQASM = "https://github.com/qevedo/openqasm"
 

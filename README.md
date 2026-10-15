@@ -10,7 +10,7 @@ pip install qevedo            # or qevedo[numpy] for NumPy state vectors
 
 | Package | Import | What it is |
 |---|---|---|
-| [`qevedo-compiler`](https://github.com/qevedo/qevedo-compiler) | `qevedo.compiler` | QCC, a technology-agnostic quantum circuit compiler (and the `qcc` command) |
+| [`qevedo-compiler`](https://github.com/qevedo/qcc) | `qevedo.compiler` | QCC, a technology-agnostic quantum circuit compiler (and the `qcc` command) |
 | [`qevedo-simulator`](https://github.com/qevedo/qevedo-simulator) | `qevedo.simulator` | qvd, a fast simulator: AVX2 state vector, stabilizer, MPS and near-Clifford backends |
 | [`openqasm`](https://github.com/qevedo/openqasm) | `openqasm` | OpenQASM 2 and 3 parser and checker, used by the compiler |
 
